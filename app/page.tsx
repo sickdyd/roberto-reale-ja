@@ -37,7 +37,10 @@ export default function Home() {
           </p>
           <p className="max-w-xl">
             I am a{" "}
-            <a href="https://www.credly.com/badges/08104359-709a-4150-b3b7-297d90f26ccf/public_url">
+            <a
+              target="_blank"
+              href="https://www.credly.com/badges/08104359-709a-4150-b3b7-297d90f26ccf/public_url"
+            >
               Certified Kubernetes Administrator
             </a>
             .
