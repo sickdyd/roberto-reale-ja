@@ -1,5 +1,12 @@
 "use client";
+import { Poppins } from "next/font/google";
 import { useState } from "react";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "700", "400", "500", "900"],
+});
+
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -10,7 +17,9 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <h1 className="mb-12 text-6xl font-bold">Roberto Reale</h1>
+      <h1 className={`mb-12 text-6xl font-bold ${poppins.className}`}>
+        Roberto Reale
+      </h1>
       <div className="flex flex-row space-x-8">
         <div className="align-center flex flex-col space-y-4">
           <h2 className="text-lg">👋 Hello, welcome to my homepage!</h2>
