@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --link-hover-color: #8795ac;
 }
 
 body {
@@ -40,4 +41,25 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+a {
+  color: rgb(var(--foreground-rgb));
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+a:visited {
+  color: rgb(var(--foreground-rgb));
+  text-decoration: underline;
+}
+
+a:active {
+  color: rgb(var(--foreground-rgb));
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
 }
