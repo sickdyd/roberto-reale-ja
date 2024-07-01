@@ -1,9 +1,18 @@
+"use client";
+import { useState } from "react";
 export default function Home() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const handleSetDarkMode = () => {
+    setDarkMode((previousDarkMode) => !previousDarkMode);
+    document.documentElement.classList.toggle("dark");
+  };
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-24">
       <h1 className="mb-12 text-6xl font-bold">Roberto Reale</h1>
       <div className="flex flex-row space-x-8">
-        <div className="flex flex-col space-y-4">
+        <div className="align-center flex flex-col space-y-4">
           <h2 className="text-lg">👋 Hello, welcome to my homepage!</h2>
           <p className="max-w-xl">
             I’m a seasoned web developer with{" "}
@@ -24,6 +33,9 @@ export default function Home() {
             </a>
             .
           </p>
+          <button className="self-center text-2xl" onClick={handleSetDarkMode}>
+            {darkMode ? "🌝" : "🌘"}
+          </button>
         </div>
       </div>
     </main>
