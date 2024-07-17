@@ -4,7 +4,7 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
   --link-hover-color: #8795ac;
 }
@@ -17,6 +17,8 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  overflow-y: scroll;
+  @apply font-thin leading-relaxed;
 }
 
 /* Dark mode variables */
@@ -45,21 +47,26 @@ body {
 
 a {
   color: rgb(var(--foreground-rgb));
-  text-decoration: underline;
-  transition: color 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 a:visited {
   color: rgb(var(--foreground-rgb));
-  text-decoration: underline;
 }
 
 a:active {
   color: rgb(var(--foreground-rgb));
-  text-decoration: underline;
 }
 
 a:hover {
   color: var(--link-hover-color);
-  text-decoration: underline;
+  @apply bg-blue-950 text-lime-500;
+}
+
+ul {
+  @apply list-inside list-disc;
+}
+
+h3 {
+  @apply mb-2 mt-2 text-lg font-bold;
 }

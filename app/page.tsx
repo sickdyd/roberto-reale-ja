@@ -1,55 +1,44 @@
 "use client";
-import { Poppins } from "next/font/google";
-import { useState } from "react";
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["300", "700", "400", "500", "900"],
-});
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
-
-  const handleSetDarkMode = () => {
-    setDarkMode((previousDarkMode) => !previousDarkMode);
-    document.documentElement.classList.toggle("dark");
-  };
-
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <h1 className={`mb-12 text-6xl font-bold ${poppins.className}`}>
-        Roberto Reale
-      </h1>
-      <div className="flex flex-row space-x-8">
-        <div className="align-center flex flex-col space-y-4">
-          <h2 className="text-lg">👋 Hello, welcome to my homepage!</h2>
-          <p className="max-w-xl">
-            I’m a seasoned web developer with{" "}
-            <strong>over ten years of extensive experience</strong> in creating,
-            managing, and optimizing websites and web applications.
-          </p>
-          <p className="max-w-xl">
-            Throughout my career, I have honed my skills in various programming
-            languages and frameworks. I work mainly with{" "}
-            <strong>JavaScript</strong> (React, Next.js, Node.js),{" "}
-            <strong>Ruby on Rails</strong> and <strong>CSS</strong> (vanilla and
-            Tailwind).
-          </p>
-          <p className="max-w-xl">
-            I am a{" "}
-            <a
-              target="_blank"
-              href="https://www.credly.com/badges/08104359-709a-4150-b3b7-297d90f26ccf/public_url"
-            >
-              Certified Kubernetes Administrator
-            </a>
-            .
-          </p>
-          <button className="self-center text-2xl" onClick={handleSetDarkMode}>
-            {darkMode ? "🌝" : "🌘"}
-          </button>
-        </div>
-      </div>
-    </main>
+    <div>
+      <p className="mb-4">👋 Hello, welcome to my homepage!</p>
+      <p className="mb-4">
+        My name is Roberto Josef Antonio Reale. I’m a seasoned web developer
+        with <strong>over ten years of extensive experience</strong> in
+        creating, managing, and optimizing websites and web applications.
+      </p>
+      <p className="mb-4">
+        Currently I am located in Osaka, Japan. However, my home country is
+        Italy, where I go every year to visit my relatives.
+      </p>
+      <p className="mb-4">
+        Throughout my career, I have honed my skills in various programming
+        languages and frameworks. I work mainly with <strong>JavaScript</strong>{" "}
+        (React, Next.js, Node.js) and <strong>Ruby on Rails</strong>.
+      </p>
+      <p className="mb-4">
+        I am proficient with <strong>HTML</strong> and <strong>CSS</strong>{" "}
+        (vanilla and Tailwind).
+      </p>
+      <p className="mb-4">
+        I am also a{" "}
+        <a
+          target="_blank"
+          href="https://www.credly.com/badges/08104359-709a-4150-b3b7-297d90f26ccf/public_url"
+        >
+          <strong>Certified Kubernetes Administrator</strong>
+        </a>
+        .
+      </p>
+      <p className="mb-4">
+        On a monthly basis I play live some of my original songs in some local
+        venues. Whenver there is the chance, I also go surfing!
+      </p>
+      <p className="mb-4">
+        If you want to get in touch, hit me up with an email :-)
+      </p>
+    </div>
   );
 }
