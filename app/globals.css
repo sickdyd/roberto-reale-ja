@@ -12,21 +12,11 @@ a:hover {
 }
 
 a {
-  @apply clickable;
-  @apply underline decoration-1 underline-offset-2 transition-all duration-200 ease-in-out;
+  @apply underline decoration-1 underline-offset-2;
 }
 
 h3 {
   @apply mb-2 mt-2 text-lg font-bold;
-}
-
-/* Used for animating div increasing in height */
-.super-max-height {
-  max-height: 1000vh;
-}
-
-.clickable {
-  @apply transition-all duration-200 ease-in-out;
 }
 
 .clickable-hover {

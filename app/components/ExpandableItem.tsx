@@ -6,20 +6,17 @@ import { Project } from "../recent-work/page";
 
 export default function ExpandableItem({ project }: { project: Project }) {
   const [expanded, setExpanded] = React.useState<boolean>(false);
-  const contentsDivRef = React.useRef<HTMLDivElement>(null);
 
   const handleOnMouseDown = (event: React.MouseEvent) => {
-    // Prevent selecting all text when clicking fast on the item
-    if (event.detail > 1) {
-      event.preventDefault();
-    }
-
     setExpanded((prev) => !prev);
   };
 
   return (
     <div className="mt-2 flex flex-col">
-      <div className="clickable flex flex-row" onMouseDown={handleOnMouseDown}>
+      <button
+        className="clickable flex flex-row text-left"
+        onMouseDown={handleOnMouseDown}
+      >
         <div className="items-top mt-1 flex">
           <BiChevronRight
             className={`inline-block transition-[transform] ${expanded && "rotate-90"}`}
@@ -27,9 +24,8 @@ export default function ExpandableItem({ project }: { project: Project }) {
           />
         </div>
         <div className="ml-1">{project.title}</div>
-      </div>
+      </button>
       <div
-        ref={contentsDivRef}
         className={`flex flex-col ${expanded ? expandedItemClasses : collapsedItemClasses}`}
       >
         {project.contents}
@@ -44,5 +40,5 @@ export default function ExpandableItem({ project }: { project: Project }) {
   );
 }
 
-const collapsedItemClasses = `ml-5 max-h-0 overflow-hidden opacity-0 transition-all duration-300`;
-const expandedItemClasses = `mb-5 ml-5 super-max-height opacity-100 transition-all duration-300`;
+const collapsedItemClasses = `ml-5 max-h-0 overflow-hidden`;
+const expandedItemClasses = `mb-5 ml-5 h-auto overflow-visible`;
