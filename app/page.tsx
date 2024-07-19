@@ -4,9 +4,9 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div>
-      <p className="mb-6 border-l-2 border-l-slate-200 pl-4 text-sm">
+      <p className="mb-6 flex flex-col border-l-2 border-l-slate-200 pl-4 text-sm">
         <i>Simplicity is the ultimate sophistication.</i>
-        <p className="mt-2 font-sans text-sm">— Leonardo Da Vinci</p>
+        <span className="mt-2 font-sans text-sm">— Leonardo Da Vinci</span>
       </p>
       <p className="mb-4">👋 Hello, welcome to my homepage!</p>
       <p className="mb-4">
