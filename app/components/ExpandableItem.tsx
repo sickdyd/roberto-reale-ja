@@ -12,7 +12,7 @@ export default function ExpandableItem({ project }: { project: Project }) {
   };
 
   return (
-    <div className="mt-2 flex flex-col">
+    <div className="mt-6 flex flex-col">
       <button
         className="clickable flex flex-row text-left"
         onMouseDown={handleOnMouseDown}
