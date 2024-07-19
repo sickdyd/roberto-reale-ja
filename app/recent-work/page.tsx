@@ -86,7 +86,7 @@ const projects: Project[] = [
   },
   {
     title:
-      "AWS nuker application: automate AWS accounts resources clean up and preventing financial damage...",
+      "AWS nuker application: automate AWS accounts resources clean up to prevent further financial damage...",
     contents: (
       <>
         <h3>Context</h3>
@@ -117,7 +117,7 @@ const projects: Project[] = [
   },
   {
     title:
-      "Update the main UXPin Electron app from version v8 to v24, getting rid of dozens of bugs in one go...",
+      "Update the UXPin Electron app from version v8 to v24, getting rid of dozens of bugs in one go...",
     contents: (
       <>
         <h3>Context</h3>
