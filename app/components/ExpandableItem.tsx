@@ -7,7 +7,7 @@ import { Project } from "../recent-work/page";
 export default function ExpandableItem({ project }: { project: Project }) {
   const [expanded, setExpanded] = React.useState<boolean>(false);
 
-  const handleOnMouseDown = (event: React.MouseEvent) => {
+  const handleOnMouseDown = () => {
     setExpanded((prev) => !prev);
   };
 
