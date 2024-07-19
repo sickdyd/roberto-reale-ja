@@ -24,9 +24,9 @@ export default function Home() {
       </p>
       <p className="mb-4">
         I'm contribuiting with a few{" "}
-        <Link target="_blank" href="https://www.npmjs.com/~sickdyd">
+        <LinkWithIcon target="_blank" href="https://www.npmjs.com/~sickdyd">
           npm packages
-        </Link>{" "}
+        </LinkWithIcon>{" "}
         to the Open Source Community, feel free to check them out and give me
         some feedback!
       </p>
