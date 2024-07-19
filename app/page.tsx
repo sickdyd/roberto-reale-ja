@@ -1,8 +1,13 @@
 "use client";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div>
+      <p className="mb-6 border-l-2 border-l-slate-200 pl-4 text-sm">
+        <i>Simplicity is the ultimate sophistication.</i>
+        <p className="mt-2 font-sans text-sm">— Leonardo Da Vinci</p>
+      </p>
       <p className="mb-4">👋 Hello, welcome to my homepage!</p>
       <p className="mb-4">
         My name is Roberto Josef Antonio Reale. I’m a seasoned web developer
@@ -17,9 +22,12 @@ export default function Home() {
         and Tailwind).
       </p>
       <p className="mb-4">
-        Normally I work from Osaka, <strong>Japan</strong>. Every year I travel
-        back to my home country, <strong>Italy</strong>, and spend several weeks
-        or months working from there.
+        I'm contribuiting with a few{" "}
+        <Link target="_blank" href="https://www.npmjs.com/~sickdyd">
+          npm packages
+        </Link>{" "}
+        to the Open Source Community, feel free to check them out and give me
+        some feedback!
       </p>
       <p className="mb-4">
         I am also a{" "}
@@ -30,6 +38,11 @@ export default function Home() {
           <strong>Certified Kubernetes Administrator</strong>
         </a>
         .
+      </p>
+      <p className="mb-4">
+        Normally I work from Osaka, <strong>Japan</strong>. Every year I travel
+        back to my home country, <strong>Italy</strong>, and spend several weeks
+        or months working from there.
       </p>
       <p className="mb-4">
         On a monthly basis I play live some of my original songs in some local

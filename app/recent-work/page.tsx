@@ -22,7 +22,7 @@ export default function RecentWork() {
 const projects: Project[] = [
   {
     title: (
-      <span>
+      <span className="no-underline">
         Saving thousands per month on our GCP bill by building a custom Ruby
         library to provision virtual machines on our self-managed Kubernetes
         clusters...

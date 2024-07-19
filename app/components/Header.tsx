@@ -7,24 +7,27 @@ export default function Header() {
       <Title />
       <nav>
         <div className="mt-8 flex flex-row lg:mt-0">
-          <Link className="border-r border-slate-200 pr-2" href="/recent-work">
+          <Link className={menuEntryClasses} href="/recent-work">
             Recent work
           </Link>
           <Link
-            className="border-r border-slate-200 pl-2 pr-2"
+            className={menuEntryClasses}
             target="_blank"
             href="https://github.com/sickdyd"
           >
             Github
           </Link>
           <Link
-            className="border-r border-slate-200 pl-2 pr-2"
+            className={menuEntryClasses}
             target="_blank"
             href="https://www.npmjs.com/~sickdyd"
           >
             npm
           </Link>
-          <Link className="pl-2 pr-2" href="mailto:roberto.reale.ja@gmail.com">
+          <Link
+            className={`${menuEntryClasses} border-0`}
+            href="mailto:roberto.reale.ja@gmail.com"
+          >
             Email
           </Link>
         </div>
@@ -32,3 +35,5 @@ export default function Header() {
     </header>
   );
 }
+
+const menuEntryClasses = `border-r border-slate-200 pl-2 pr-2 no-underline`;
