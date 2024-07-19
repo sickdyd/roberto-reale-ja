@@ -8,7 +8,7 @@ const poppins = Poppins({
 
 export default function Title() {
   return (
-    <h1 className={`text-4xl font-bold ${poppins.className}`}>
+    <h1 className={`font-bold sm:text-3xl ${poppins.className} lg:text-5xl`}>
       <Link href="/" className="no-underline">
         Roberto Reale
       </Link>

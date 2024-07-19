@@ -1,13 +1,12 @@
 "use client";
-import Link from "next/link";
 import LinkWithIcon from "./components/LinkWithIcon";
 
 export default function Home() {
   return (
     <div>
-      <p className="mb-6 flex flex-col border-l-2 border-l-slate-200 pl-4 text-sm">
+      <p className="mb-8 flex flex-col border-l-2 border-l-slate-200 pl-4 text-xl">
         <i>Simplicity is the ultimate sophistication.</i>
-        <span className="mt-2 font-sans text-sm">— Leonardo Da Vinci</span>
+        <span className="mt-2 font-sans text-xl">— Leonardo Da Vinci</span>
       </p>
       <p className="mb-4">👋 Hello, welcome to my homepage!</p>
       <p className="mb-4">
