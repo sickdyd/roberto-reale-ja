@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import ExpandableItems from "../components/ExpandableItems";
+import LinkWithIcon from "../components/LinkWithIcon";
 
 export type Project = {
   title: ReactNode;
@@ -33,9 +34,9 @@ const projects: Project[] = [
         <h3>Context</h3>
         <span>
           At{" "}
-          <a href="https://www.trueability.com" target="_blank">
+          <LinkWithIcon href="https://www.trueability.com" target="_blank">
             TrueAbility
-          </a>{" "}
+          </LinkWithIcon>{" "}
           we provision ephemeral test environments that comprehend two or more
           virtual machines used by candiates to demonstrate their skills by
           completing a set of tasks in order to get a certificate. Among our

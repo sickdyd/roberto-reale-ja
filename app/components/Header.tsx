@@ -1,4 +1,4 @@
-import Link from "next/link";
+import LinkWithIcon from "./LinkWithIcon";
 import Title from "./Title";
 
 export default function Header() {
@@ -7,29 +7,29 @@ export default function Header() {
       <Title />
       <nav>
         <div className="mt-8 flex flex-row lg:mt-0">
-          <Link className={menuEntryClasses} href="/recent-work">
+          <LinkWithIcon className={menuEntryClasses} href="/recent-work">
             Recent work
-          </Link>
-          <Link
+          </LinkWithIcon>
+          <LinkWithIcon
             className={menuEntryClasses}
             target="_blank"
             href="https://github.com/sickdyd"
           >
             Github
-          </Link>
-          <Link
+          </LinkWithIcon>
+          <LinkWithIcon
             className={menuEntryClasses}
             target="_blank"
             href="https://www.npmjs.com/~sickdyd"
           >
             npm
-          </Link>
-          <Link
+          </LinkWithIcon>
+          <LinkWithIcon
             className={`${menuEntryClasses} border-r-0`}
             href="mailto:roberto.reale.ja@gmail.com"
           >
             Email
-          </Link>
+          </LinkWithIcon>
         </div>
       </nav>
     </header>
