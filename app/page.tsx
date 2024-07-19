@@ -10,17 +10,16 @@ export default function Home() {
         creating, managing, and optimizing websites and web applications.
       </p>
       <p className="mb-4">
-        Currently I am located in Osaka, Japan. However, my home country is
-        Italy, where I go every year to visit my relatives.
-      </p>
-      <p className="mb-4">
         Throughout my career, I have honed my skills in various programming
         languages and frameworks. I work mainly with <strong>JavaScript</strong>{" "}
-        (React, Next.js, Node.js) and <strong>Ruby on Rails</strong>.
+        (React, Next.js, Node.js) and <strong>Ruby on Rails</strong>. I am also
+        proficient with <strong>HTML</strong> and <strong>CSS</strong> (vanilla
+        and Tailwind).
       </p>
       <p className="mb-4">
-        I am proficient with <strong>HTML</strong> and <strong>CSS</strong>{" "}
-        (vanilla and Tailwind).
+        Normally I work from Osaka, <strong>Japan</strong>. Every year I travel
+        back to my home country, <strong>Italy</strong>, and spend several weeks
+        or months working from there.
       </p>
       <p className="mb-4">
         I am also a{" "}
@@ -34,7 +33,7 @@ export default function Home() {
       </p>
       <p className="mb-4">
         On a monthly basis I play live some of my original songs in some local
-        venues. Whenver there is the chance, I also go surfing!
+        venues. Whenever there is the chance, I also go surfing! 🏄‍♂️
       </p>
       <p className="mb-4">
         If you want to get in touch, hit me up with an email :-)
