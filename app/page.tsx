@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import LinkWithIcon from "./components/LinkWithIcon";
 
 export default function Home() {
   return (
@@ -31,12 +32,12 @@ export default function Home() {
       </p>
       <p className="mb-4">
         I am also a{" "}
-        <a
+        <LinkWithIcon
           target="_blank"
           href="https://www.credly.com/badges/08104359-709a-4150-b3b7-297d90f26ccf/public_url"
         >
           <strong>Certified Kubernetes Administrator</strong>
-        </a>
+        </LinkWithIcon>
         .
       </p>
       <p className="mb-4">
