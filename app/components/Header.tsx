@@ -25,7 +25,7 @@ export default function Header() {
             npm
           </Link>
           <Link
-            className={`${menuEntryClasses} border-0`}
+            className={`${menuEntryClasses} border-r-0`}
             href="mailto:roberto.reale.ja@gmail.com"
           >
             Email
