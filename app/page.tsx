@@ -1,4 +1,3 @@
-"use client";
 import LinkWithIcon from "./components/LinkWithIcon";
 
 export default function Home() {

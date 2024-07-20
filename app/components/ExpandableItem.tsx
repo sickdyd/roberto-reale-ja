@@ -7,9 +7,7 @@ import { Project } from "../recent-work/page";
 export default function ExpandableItem({ project }: { project: Project }) {
   const [expanded, setExpanded] = React.useState<boolean>(false);
 
-  const handleOnMouseDown = () => {
-    setExpanded((prev) => !prev);
-  };
+  const handleOnMouseDown = () => setExpanded((prev) => !prev);
 
   return (
     <div className="mt-6 flex flex-col">
@@ -26,7 +24,7 @@ export default function ExpandableItem({ project }: { project: Project }) {
         <div className="ml-1">{project.title}</div>
       </button>
       <div
-        className={`flex flex-col ${expanded ? expandedItemClasses : collapsedItemClasses}`}
+        className={`flex flex-col ${expanded ? "mb-5 ml-5 h-auto overflow-visible" : "ml-5 max-h-0 overflow-hidden"}`}
       >
         {project.contents}
         <button
@@ -39,6 +37,3 @@ export default function ExpandableItem({ project }: { project: Project }) {
     </div>
   );
 }
-
-const collapsedItemClasses = `ml-5 max-h-0 overflow-hidden`;
-const expandedItemClasses = `mb-5 ml-5 h-auto overflow-visible`;
