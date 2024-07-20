@@ -34,7 +34,11 @@ const projects: Project[] = [
         <h3>Context</h3>
         <span>
           At{" "}
-          <LinkWithIcon href="https://www.trueability.com" target="_blank">
+          <LinkWithIcon
+            href="https://www.trueability.com"
+            target="_blank"
+            aria-label="Visit TrueAbility"
+          >
             TrueAbility
           </LinkWithIcon>{" "}
           we provision ephemeral test environments that comprehend two or more

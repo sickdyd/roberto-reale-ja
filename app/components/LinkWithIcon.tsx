@@ -13,7 +13,11 @@ export default function LinkWithIcon(
     <Link {...props} className={`whitespace-nowrap ${className}`}>
       {children}
       {external && (
-        <RiExternalLinkLine size={12} className="mb-1 ml-1 inline-block" />
+        <RiExternalLinkLine
+          size={12}
+          className="mb-1 ml-1 inline-block"
+          aria-hidden="true"
+        />
       )}
     </Link>
   );

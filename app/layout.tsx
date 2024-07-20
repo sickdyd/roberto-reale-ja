@@ -24,7 +24,7 @@ export default function RootLayout({
         className={`${roboto.className} mx-auto flex max-w-4xl flex-col justify-center p-10 lg:p-20`}
       >
         <Header />
-        <main>{children}</main>
+        <main role="main">{children}</main>
         <footer></footer>
       </body>
     </html>

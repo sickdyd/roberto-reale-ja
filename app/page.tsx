@@ -25,7 +25,11 @@ export default function Home() {
       </p>
       <p className="mb-4">
         I'm contribuiting with a few{" "}
-        <LinkWithIcon target="_blank" href="https://www.npmjs.com/~sickdyd">
+        <LinkWithIcon
+          target="_blank"
+          href="https://www.npmjs.com/~sickdyd"
+          aria-label="npm packages on npmjs.com"
+        >
           npm packages
         </LinkWithIcon>{" "}
         to the Open Source Community, feel free to check them out and give me
@@ -36,6 +40,7 @@ export default function Home() {
         <LinkWithIcon
           target="_blank"
           href="https://www.credly.com/badges/08104359-709a-4150-b3b7-297d90f26ccf/public_url"
+          aria-label="Certified Kubernetes Administrator badge on Credly"
         >
           <strong>Certified Kubernetes Administrator</strong>
         </LinkWithIcon>

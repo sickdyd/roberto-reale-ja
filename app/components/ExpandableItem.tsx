@@ -14,6 +14,11 @@ export default function ExpandableItem({ project }: { project: Project }) {
       <button
         className="clickable flex flex-row text-left"
         onMouseDown={handleOnMouseDown}
+        aria-expanded={expanded}
+        aria-controls={`content-${project.title}`}
+        aria-label={
+          expanded ? "Collapse project details" : "Expand project details"
+        }
       >
         <div className="items-top mt-1 flex">
           <BiChevronRight
@@ -30,6 +35,7 @@ export default function ExpandableItem({ project }: { project: Project }) {
         <button
           className="clickable mt-5 self-end justify-self-center border border-blue-950 pl-1 pr-1"
           onClick={handleOnMouseDown}
+          aria-label="Collapse project details"
         >
           <FiChevronsUp />
         </button>
