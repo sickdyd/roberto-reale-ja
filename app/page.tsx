@@ -3,10 +3,13 @@ import LinkWithIcon from "./components/LinkWithIcon";
 export default function Home() {
   return (
     <div>
-      <p className="mb-8 flex flex-col border-l-2 border-l-slate-200 pl-4 text-xl">
+      <blockquote
+        className="mb-8 flex flex-col border-l-2 border-l-slate-200 pl-4 text-xl"
+        cite="https://quoteinvestigator.com/2015/04/02/simple/"
+      >
         <i>Simplicity is the ultimate sophistication.</i>
         <span className="mt-2 font-sans text-xl">— Leonardo Da Vinci</span>
-      </p>
+      </blockquote>
       <p className="mb-4">👋 Hello, welcome to my homepage!</p>
       <p className="mb-4">
         My name is Roberto Josef Antonio Reale. I’m a seasoned web developer
