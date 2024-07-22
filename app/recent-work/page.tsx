@@ -11,9 +11,10 @@ export default function RecentWork() {
   return (
     <>
       <p>
-        Due to the diverse nature of the roles I've covered, some of the most
-        memorable achievements are not something that can be shared on GitHub.
-        To learn more about what I worked on, click on the sections below!
+        Due to the diverse nature of the roles I've covered in my career, some
+        of the most memorable achievements are not something that can be shared
+        on GitHub. To learn more about what I worked on, click on the sections
+        below!
       </p>
       <ExpandableItems projects={projects} />
     </>
@@ -23,16 +24,16 @@ export default function RecentWork() {
 const projects: Project[] = [
   {
     title: (
-      <span>
-        Saving thousands per month on our GCP bill by building a custom Ruby
-        library to provision virtual machines on our self-managed Kubernetes
-        clusters...
-      </span>
+      <p className="mb-2">
+        <strong>Saving $12k per month</strong> on our GCP bill by building a
+        custom Ruby library to provision virtual machines on our self-managed
+        Kubernetes clusters...
+      </p>
     ),
     contents: (
       <>
-        <h3>Context</h3>
-        <span>
+        <h3>The challenge</h3>
+        <p className="mb-2">
           At{" "}
           <LinkWithIcon
             href="https://www.trueability.com"
@@ -41,50 +42,80 @@ const projects: Project[] = [
           >
             TrueAbility
           </LinkWithIcon>{" "}
-          we provision ephemeral test environments that comprehend two or more
-          virtual machines used by candiates to demonstrate their skills by
-          completing a set of tasks in order to get a certificate. Among our
-          customers we have Google, DigitalOcean, Elastic, HashiCorp, VMWare,
-          Canonical and more. We have the capability to provision our test
-          environment on several providers, such as Rackspace, AWS, GCP and
-          Packet. Provisioning those environments on Google Cloud Platform
-          became our main expense. During 2023/2024, we completed the
-          installation of several self-managed Kubernetes clusters worldwide.
-          Once our our brand new clusters became available, we decided to
-          migrate the provisioning to them, with the aim of reducing our GCP
-          bill to zero. I was tasked with leading the migration project.
-        </span>
+          we provision ephemeral test environments with two or more virtual
+          machines used by candiates to assess their skills in order to get a
+          certificate. Our customers include world-renowned names, such as{" "}
+          <strong>Google</strong>, <strong>Elastic</strong>,{" "}
+          <strong>HashiCorp</strong>, <strong>VMWare</strong> and more.
+        </p>
+        <p className="mb-2">
+          During 2023/2024, we completed the installation of several
+          self-managed Kubernetes clusters worldwide. We decided to migrate the
+          provisioning of the test environment VMs to our new clusters, with the
+          aim of reducing our GCP bill to zero. I was tasked with leading the
+          migration project.
+        </p>
         <h3>Steps, challenges and notable achievements</h3>
-        <div>
-          <p>
-            - Initial investigation of available tools potentially viable to
-            complete the task: none of them was a good fit
-          </p>
-          <p>
-            - Setting up a sensible dev environment to test provisioning on k8s
-            by leveraing ngrok endpoints and edges
-          </p>
-          <p>
-            - Estabilishing a direct communication channel with the kubevirt dev
-            team to solve early stages issues
-          </p>
-          <p>
-            - Avoid rebuilding from scratch the existing GCP golden images by
-            tweaking them to work with k8s
-          </p>
-          <p>
-            - Converting GCP resources to the k8s equivalents (VPCs, additional
+        <ul className="list-inside list-disc">
+          <li>
+            Trying to avoid <i>reinventing the wheel:</i> initial investigation
+            of available tools potentially viable to complete the task — none of
+            them was a good fit
+          </li>
+          <li>
+            Estabilishing a direct communication channel with the{" "}
+            <LinkWithIcon href="https://kubevirt.io/" target="_blank">
+              KubeVirt
+            </LinkWithIcon>{" "}
+            dev team (email and Slack) to shed light on some of the initial
+            unknowns
+          </li>
+          <li>
+            Setting up a sensible local dev environment to test provisioning on
+            k8s, achieved by redirecting the staging domain by leveraging ngrok
+            endpoints and edges — no local dev environment to test provisioning
+            was available before this; in terms of dev speed, this was a game
+            changer!
+          </li>
+          <li>
+            Converting GCP resources to the k8s equivalents (VPCs, additional
             disks, etc)
-          </p>
-          <p>
-            - Building a service to communicate with the k8s API control plane
-          </p>
-          <p>
-            - After extensive testing, careful migration of live test
-            environments provisioning to k8s
-          </p>
-          <p>- In a time span of 3/4 months, virtually zeroing our GCP bill</p>
-        </div>
+          </li>
+          <li>
+            Building a Ruby on Rails service to communicate with the k8s API
+            control plane to dynamically generate all required resources on
+            demand
+          </li>
+          <li>
+            Adding support for multiple clusters across the world, with support
+            for different{" "}
+            <LinkWithIcon
+              href="https://kubernetes.io/docs/concepts/storage/storage-classes/"
+              target="_blank"
+            >
+              storage classes
+            </LinkWithIcon>
+          </li>
+          <li>
+            Implementing VM imaging with{" "}
+            <span className="bg-slate-400 p-0.5 font-mono text-sm text-slate-50">
+              VirtualMachineSnapshot
+            </span>{" "}
+            and restore with{" "}
+            <span className="bg-slate-400 p-0.5 font-mono text-sm text-slate-50">
+              VirtualMachineRestore
+            </span>{" "}
+            to be able to restart old test environments when needed
+          </li>
+          <li>
+            After extensive testing, careful migration of live test environments
+            provisioning to k8s
+          </li>
+          <li>
+            In a time span of 3/4 months,{" "}
+            <strong>virtually zeroing our GCP bill</strong> 🏁
+          </li>
+        </ul>
       </>
     ),
   },
