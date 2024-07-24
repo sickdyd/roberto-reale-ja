@@ -1,3 +1,4 @@
+import Carousel from "./components/Carousel";
 import LinkWithIcon from "./components/LinkWithIcon";
 
 export default function Home() {
@@ -55,6 +56,7 @@ export default function Home() {
         </LinkWithIcon>{" "}
         :-)
       </p>
+      <Carousel />
     </div>
   );
 }
