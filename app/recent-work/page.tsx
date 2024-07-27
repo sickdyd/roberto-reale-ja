@@ -356,12 +356,6 @@ const projects: Project[] = [
           </LinkWithIcon>
           .
         </span>
-        <h3>Steps, challenges and notable achievements</h3>
-        <ul className="list-inside list-disc">
-          <li>Tons of fixes / refactors on the pre existing code</li>
-          <li>Mapping each Figma element attribute to UXPin</li>
-          <li></li>
-        </ul>
       </>
     ),
   },
