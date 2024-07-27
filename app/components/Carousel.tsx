@@ -25,7 +25,7 @@ export default function Carousel() {
         {logos.map((logo) => (
           <Image
             key={logo}
-            src={`/${logo}.svg`}
+            src={`/tech-stack-icons/${logo}.svg`}
             alt={`${logo} logo`}
             width={48}
             height={48}
