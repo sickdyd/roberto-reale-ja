@@ -1,4 +1,5 @@
 import Image from "next/image";
+import "../components/carousel.css";
 
 export default function Carousel() {
   const logos = [
@@ -17,21 +18,28 @@ export default function Carousel() {
   ];
 
   return (
-    <div className="flexflex-col mt-8 items-center justify-center">
+    <div className="logos mt-8 overflow-hidden whitespace-nowrap">
       <p className="mb-4 text-center text-xs text-slate-600">
         Bringing you the best web experience with:
       </p>
-      <div className="flex justify-center gap-6 overflow-hidden">
-        {logos.map((logo) => (
-          <Image
-            key={logo}
-            src={`/tech-stack-icons/${logo}.svg`}
-            alt={`${logo} logo`}
-            width={48}
-            height={48}
-          />
-        ))}
-      </div>
+      {[logos, logos].map((logos, index) => (
+        <div
+          key={`logos-${index}`}
+          className="logos-slide inline-block whitespace-nowrap"
+        >
+          {logos.map((logo, index) => (
+            <Image
+              className="ml-16 inline-block w-12"
+              key={`${logo}-${index}`}
+              src={`/tech-stack-icons/${logo}.svg`}
+              alt={`${logo} logo`}
+              width={48}
+              height={48}
+              title={logo}
+            />
+          ))}
+        </div>
+      ))}
     </div>
   );
 }

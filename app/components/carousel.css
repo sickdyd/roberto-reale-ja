@@ -1,0 +1,13 @@
+.logos-slide {
+  width: calc(12 * 112px);
+  animation: slide 50s infinite linear;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
